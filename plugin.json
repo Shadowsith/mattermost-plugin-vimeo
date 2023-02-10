@@ -1,0 +1,16 @@
+{
+    "id": "vimeo",
+    "name": "Vimeo",
+    "description": "Mattermost web app plugin to have an embedded videoplayer for Vimeo urls",
+    "homepage_url": "https://github.com/Shadowsith/mattermost-plugin-vimeo",
+    "support_url": "https://github.com/Shadowsith/mattermost-plugin-vimeo/issues",
+    "release_notes_url": "https://example.com/releases/v0.0.1",
+    "version": "1.0.0",
+    "webapp": {
+        "bundle_path": "main.js"
+    },
+    "props": {
+        "iframeWidth": 600,
+        "iframeHeight": 340
+    }
+}
