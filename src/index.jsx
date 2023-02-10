@@ -5,11 +5,13 @@ class PostWillRenderEmbed extends React.Component {
 
     render() {
         let title = '';
+        let description = '';
         const iframeWidth = PostWillRenderEmbed.plugin.props.iframeWidth;
         const iframeHeight = PostWillRenderEmbed.plugin.props.iframeHeight;
 
         try {
             title = this.props.embed.data.title;
+            description = this.props.embed.data.description;
         } catch {
         }
 
@@ -22,7 +24,15 @@ class PostWillRenderEmbed extends React.Component {
 
         return (
             <div>
-                <h5>{title}</h5>
+                <h5>
+                    Vimeo -&nbsp;
+                    <a href={this.props.embed.url} target="_blank">
+                        {title}
+                    </a>
+                </h5>
+                <div>
+                    <small>{description}</small>
+                </div>
                 <iframe src={url} width={iframeWidth} height={iframeHeight}>
                 </iframe>
             </div>
